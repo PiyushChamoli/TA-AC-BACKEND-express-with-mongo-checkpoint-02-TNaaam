@@ -1,0 +1,51 @@
+<% include partials/header %>
+
+<main class="container">
+    <div class="flex justify-between">
+        
+        <!-- Sort using category, location, date -->
+        <aside class="flex-30 filter"> 
+            <h3>Search By:</h3>
+            <div>
+                <a href="/events">Reset</a>
+            </div>
+            <hr/>
+            <h4>Categories</h4>
+            <div>
+                <% categoryArr.forEach((tag) => { %>
+                    <a href="/events/sort/tags?name=<%= tag %>">
+                        <%= tag %>
+                    </a>
+                <% }) %>
+            </div>
+            <hr/>
+            <h4>Locations</h4>
+            <div>
+                <% locationArr.forEach((tag) => { %>
+                    <a href="/events/sort/location?name=<%= tag %>">
+                        <%= tag %>
+                    </a>
+                <% }) %>
+            </div>
+            <hr/>
+            <h4>Date</h4>
+            <div>
+                <a href="/events/sort/date/acc">Old</a>
+                <a href="/events/sort/date/dec">New</a>
+            </div>
+        </aside>
+
+        <!-- display all events -->
+        <section class="flex-65 allevents">
+            <h2>List of all events</h2>
+                <a href="/events/new">Create Event</a>
+                <% events.forEach((event) => { %>
+                    <div class="event-box">
+                        <h4><%= event.title %></h4>
+                        <p><%= event.summary.substr(0,20) + '...' %></p>
+                        <a href="/events/<%= event.id %>">Details</a>
+                    </div>
+                <% }) %>
+        </section>
+    </div>
+</main>
