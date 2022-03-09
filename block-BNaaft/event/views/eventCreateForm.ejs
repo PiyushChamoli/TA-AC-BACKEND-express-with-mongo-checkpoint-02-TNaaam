@@ -1,0 +1,32 @@
+<% include partials/header %>
+
+<main class="container">
+    <h2>Create New Event</h2>
+    <form action="/events/new" method="post">
+
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" placeholder="Enter Title">
+
+        <label for="summary">Summary</label>
+        <textarea name="summary" id="summary" cols="30" rows="10" placeholder="Enter Summary"></textarea>
+
+        <label for="host">Host</label>
+        <input type="text" id="host" name="host" placeholder="Enter Host Name">
+
+        <label for="start_date">Start Date</label>
+        <input type="date" id="start_date" name="start_date">
+
+        <label for="end_date">End Date</label>
+        <input type="date" name="end_date" id="end_date">
+
+        <label for="category">Category</label>
+        <input type="text" id="category" name="category" placeholder="Enter Category">
+
+        <label for="location">Location</label>
+        <input type="text" name="location" id="location">
+
+        <div class="text-center">
+        <input type="submit" value="submit" class="submit-btn">
+        </div>
+    </form>
+</main>

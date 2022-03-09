@@ -1,0 +1,314 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*Custom Style*/
+
+/*General*/
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  padding: 0 32px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-30 {
+  flex: 0 1 30%;
+}
+
+.flex-45 {
+  flex: 0 1 47%;
+}
+
+.flex-65 {
+  flex: 0 1 65%;
+}
+
+/*Header*/
+
+header {
+  padding: 20px 0;
+  box-shadow: 5px 1px 5px rgba(0,0,0,0.2);
+}
+
+.brand {
+  text-decoration: none;
+  color: purple;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+li a {
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 500;
+  margin-left: 19px;
+}
+
+/*Index Page*/
+
+img {
+  width: 100%;
+}
+
+.home-sec {
+  margin: 50px 0;
+}
+
+.home-col h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: purple;
+  text-align: left;
+}
+
+.home-col p {
+  margin: 15px 0;
+  color: purple;
+  line-height: 1.2;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/*Contact Form*/
+
+h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 25px 0;
+  color: purple;
+}
+
+form {
+  /* text-align: center; */
+  max-width: 1000px;
+  padding: 30px 60px;
+  border: 2px solid purple;
+  border-radius: 7px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  margin:10px 0;
+  border: 1px solid purple;
+  border-radius: 4px;
+  padding: 7px;
+}
+
+form label {
+  text-align: left;
+  color: purple;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.submit-btn {
+  max-width: 30%;
+  font-size: 20px;
+  color: white;
+  background-color: purple;
+  padding: 7px 0px;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*Event Page*/
+
+.filter {
+  margin: 25px 0;
+}
+
+.filter h3 {
+  font-size: 23px;
+  font-weight: 500;
+  color: purple;
+  margin: 5px 0 30px 0;
+}
+
+.filter h4 {
+  font-size: 20px;
+  color: purple;
+}
+
+.filter a {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  background-color: purple;
+  padding: 5px 16px;
+  border-radius: 4px;
+  font-size: 19px;
+  margin: 10px 7px 0px 0;
+}
+
+.allevents a, .category {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  background-color: purple;
+  padding: 5px 16px;
+  border-radius: 4px;
+  font-size: 19px;
+  margin: 10px 7px 0px 0;
+}
+
+.event-box {
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 100%;
+  padding: 7px 15px;
+  margin-top: 15px;
+}
+
+.event-box h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.event-box p {
+  margin-top: 10px;
+}
+
+.event-box a {
+  background-color: black;
+}
+
+/*Event Details*/
+
+.article h3 {
+  font-size: 28px;
+  font-weight: 500;
+  color: purple;
+}
+
+.left p {
+  margin: 20px 0;
+  font-size: 19px;
+  line-height: 1.2;
+  letter-spacing: 1;
+  color: darkslategray;
+}
+
+.left a {
+  text-decoration: none;
+  /* color: purple; */
+}
+
+.category {
+  font-size: 13px;
+  padding: 5px 13px;
+  color: white;
+}
+
+.right p {
+  color: darkslategray;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+.comments {
+  margin: 30px 0;
+}
+
+.comments form {
+  padding: 20px 40px;
+}
+
+.comments .submit-btn {
+  font-size: 15px;
+  padding: 7px 0px;
+  font-weight: 500;
+}
+
+.comm {
+  padding: 12px 0;
+  margin-top: 40px;
+}
+
+.comm h4 {
+  font-size: 19px;
+  font-weight: 500;
+  color: purple;
+}
+
+.comm p {
+  font-size: 16px;
+  color: darkslategray;
+  margin: 5px 0;
+}
+
+.comm a{
+  text-decoration: none;
+}
