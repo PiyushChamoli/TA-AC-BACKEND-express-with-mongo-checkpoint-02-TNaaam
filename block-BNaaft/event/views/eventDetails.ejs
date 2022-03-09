@@ -1,0 +1,64 @@
+<% include partials/header %>
+
+<main class="container">
+    <h2>Event Details</h2>
+    <section class="flex justify-between article">
+        <div class="flex-48 left">
+            <h3><%= event.title %></h3>
+            <% event.event_category.forEach((tag) => { %>
+                <a href="#" class="category"><%= tag %></a>
+            <% }) %>
+            <p><%= event.summary %></p>
+            <span><%= event.likes %></span>
+            <a href="/events/<%= event.id  %>/like/inc">
+                <i class="fas fa-thumbs-up"></i>
+            </a>
+            <a href="/events/<%= event.id  %>/like/dec">
+                <i class="fas fa-thumbs-down"></i>
+            </a>
+            <div>
+                <a href="/events/<%= event.id  %>/edit" class="category">Edit<a>
+                <a href="/events/<%= event.id  %>/delete" class="category">Delete</a>
+            </div>
+        </div>
+        <div class="flex-48 right">
+            <p>Hosted By: <%= event.host %></p>
+            <p>Location: <%= event.location %></p>
+            <p>Starts on: <%= event.start_date.toLocaleString() %></p>
+            <p>Ends on: <%= event.end_date.toLocaleString() %></p>
+        </div>
+    </section>
+    <section class="comments">
+        <form action="/events/<%= event.id %>/remarks/new" method="post">
+            <fieldset>
+                <label for="title">Title</label>
+                <textarea name="title" id="title" cols="20" rows="6" placeholder="Write Your Remark"></textarea>
+
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" placeholder="Enter Your Name">
+
+                <div class="text-center">
+                    <input type="submit" value="submit" class="submit-btn">
+                </div>
+            </fieldset>
+        </form>
+
+        <div class="comm">
+            <% event.remarks.forEach((rem) => { %>
+                <h4><%= rem.author %></h4>
+                <p><%= rem.title %></p>
+                <span><%= rem.likes %></span>
+                <a href="/remarks/<%= rem.id  %>/like/inc">
+                    <i class="fas fa-thumbs-up"></i>
+                </a>
+                <a href="/remarks/<%= rem.id  %>/like/dec">
+                    <i class="fas fa-thumbs-down"></i>
+                </a>
+                <div>
+                    <a href="/remarks/<%= rem.id  %>/edit" class="category">Edit<a>
+                    <a href="/remarks/<%= rem.id  %>/delete" class="category">Delete</a>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+</main>

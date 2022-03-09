@@ -1,0 +1,17 @@
+<% include partials/header %>
+
+<main class="container">
+    <form action="/remarks/<%= remark._id %>/edit" method="post">
+        <fieldset>
+            <label for="title">Title</label>
+            <textarea name="title" id="title" cols="20" rows="6"><%= remark.title %></textarea>
+
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" value="<%= remark.author %>">
+
+            <div class="text-center">
+                <input type="submit" value="Update" class="submit-btn">
+            </div>
+        </fieldset>
+    </form>
+</main>

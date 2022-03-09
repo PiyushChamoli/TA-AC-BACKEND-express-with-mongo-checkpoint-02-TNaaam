@@ -1,0 +1,32 @@
+<% include partials/header %>
+
+<main class="container">
+    <h2>Create New Event</h2>
+    <form action="/events/<%= event.id %>/edit" method="post">
+
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" placeholder="Enter Title" value="<%= event.title %>">
+
+        <label for="summary">Summary</label>
+        <textarea name="summary" id="summary" cols="30" rows="10" placeholder="Enter Summary"><%= event.summary %></textarea>
+
+        <label for="host">Host</label>
+        <input type="text" id="host" name="host" placeholder="Enter Host Name" value="<%= event.host %>">
+
+        <label for="start_date">Start Date</label>
+        <input type="date" id="start_date" name="start_date" value=<%= event.start_date %>>
+
+        <label for="end_date">End Date</label>
+        <input type="date" name="end_date" id="end_date" value=<%= event.end_date %>>
+
+        <label for="category">Category</label>
+        <input type="text" id="category" name="category" placeholder="Enter Category" value="<%= event.event_category.join(' ') %>">
+
+        <label for="location">Location</label>
+        <input type="text" name="location" id="location" value="<%= event.location  %>">
+
+        <div class="text-center">
+        <input type="submit" value="Update" class="submit-btn">
+        </div>
+    </form>
+</main>
